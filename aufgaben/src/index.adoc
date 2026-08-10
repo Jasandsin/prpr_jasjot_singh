@@ -1,0 +1,32 @@
+= Programmier - Aufgaben
+:sectnums:
+:page-pdf-download: true
+:icons: font
+:table-grid: none
+:table-frame: ends
+:table-stripes: even
+
+Folgende Aufgaben sind zu lösen:
+
+link:./casualtime/index.adoc[casualtime - Casual Time]
+
+link:./wordwrap/index.adoc[wordwrap - Automatischer Zeilenumbruch]
+
+link:./morse/index.adoc[morse - Morsecode]
+
+link:./datetime/index.adoc[datetime - Datumsangaben und Uhrzeiten formatieren]
+
+link:./calc/index.adoc[calc - Calculator: Code aufräumen und debuggen]
+
+
+== Do's
+* Die Aufgaben als Weg zum Erlernen und Einüben verstehen und nicht als mühsames Pflichtprogramm.
+* Regelmässige Commits mit sinnvollen Commit Messages
+* Regelmässige Pushs, mindestens nach jeder Aufgabe, besser aber bei jedem neuen laufenden Teilschritt, wie Test geschreiben, Teilfunktion implementiert, etc.
+* Lernerfolge und Erfahrungen ins link:../../reflexion.adoc[Arbeitstagebuch] schreiben zur Reflexion über das Gelernte.
+* Mitstudierenden helfen - einander Dinge erklären und gemeinsam bearbeiten hilft beim Erlernen.
+
+== Dont's
+* KI nicht alles machen lassen. Sonst lernst Du selber nichts.
+* Lösungen nicht von anderen Copy&Pasten. Sonst lernst Du selber ebenfalls nichts.
+
