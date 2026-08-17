@@ -5,9 +5,9 @@
 :table-frame: ends
 :table-stripes: even
 
-Bearbeitet durch: _Vorname Nachname_
+Bearbeitet durch: Jasjot Singh
 
-E-Mail: _...@students.fhnw.ch_
+E-Mail: jasjot.singh@students.fhnw.ch
 
 '''
 == Do's
@@ -20,13 +20,59 @@ IMPORTANT: KI die Reflexion schreiben lassen.
 
 === Welche/s Tutorial/s habe ich durchgearbeitet?
 
+- Java Basics - 7h
+
 === Was habe ich aus dem Tutorial gewonnen (aka gelernt)?
+
+Da ich mich im letzten Semester meines Studiengangs befinde, waren die meisten Inhalte des Tutorials für mich bereits bekannt. Das Tutorial war für mich deshalb hauptsächlich eine Repetition der Java-Grundlagen. Trotzdem konnte ich einige Themen wieder auffrischen, die ich längere Zeit nicht mehr aktiv verwendet hatte. Dazu gehören unter anderem die Java Collection API, Java I/O, Concurrency, Persistence sowie verschiedene Konzepte der objektorientierten Programmierung.
+
+Besonders hilfreich war es, nochmals zu sehen, wie die verschiedenen Java-Grundlagen zusammenhängen. Auch kleinere Dinge wie JShell, die Verwendung von final, die Schreibweise von Zahlen mit Unterstrichen sowie die Funktionsweise von javac und der JVM konnte ich nochmals auffrischen.
+
+Für mich ging es bei diesem Tutorial also weniger darum, komplett neue Dinge zu lernen, sondern vielmehr darum, bereits vorhandenes Wissen wieder ins Gedächtnis zu rufen und zu festigen.
+
+------Notizen------
+
+- JAVA ECOSYSTEMS
+- MODULE?
+- COLLECTION API
+- JAVA IO API
+- JAVA CONCURRENCY API
+- Java Presistence
+- Alan Kays Vision
+- Object-orientation (Abstraction, Encapsulation, Inheritance, Polymorphism)
+- Java is platform independent
+- Java virtual maschine installed on target computer ??
+- javac OderClass.java braucht hinten .java um in virtualmaschine laufe zu lasen bei java OrderClass nicht dan ist es richtig
+- Body of class in braces {}
+- main methoded needed for JVM
+- Output to file or database, to the console, to a webpage or other user interfaces
+- jshell ausprobiert und angeschaut (Read-Evaluate_Print Loop REPL)
+- Names must not be keyowrds ( int, stirng etc)
+- String is a calss so String should be always written with S as upperclass
+- final keyword used for values which not change like Number_Of_Motnhs or PI
+- Bei int underscore möglich für lesbarkeit int cost = 123_567_333
+- switch flow control Statement
+- Superclass Logic refreshing
+- Put in getter and setter arrays or loop
+- Create setter and getter with other variables
+- Static gehört zur klasse und nicht object (Clothing.MIN_PRICE)
+- Final kann nicht mehr verändert und erweitert werden
+- ToString methode haben alle objekte und kan überschrieben werden @Override (Clothing)
+- CompareTo von Comparable (interface) Objekte vergleichen
 
 === Spass gemacht hat?
 
+Es war interessant, die Grundbausteine von Java nochmals anzuschauen. Besonders hilfreich fand ich, dass viele verschiedene Themen nochmals kompakt zusammengefasst wurden. Dadurch konnte ich mein vorhandenes Wissen auffrischen und gleichzeitig feststellen, welche Themen noch gut sitzen und welche ich längere Zeit nicht mehr verwendet habe.
+
 === Mühsam war?
+
+Teilweise war es mühsam, Themen nochmals ausführlich anzuschauen, die ich bereits aus meinem Studium kenne und schon oft angewendet habe. Viele Inhalte waren deshalb reine Wiederholung.
+
+Trotzdem war die Wiederholung sinnvoll, da ich dadurch gemerkt habe, dass einige Details mit der Zeit in Vergessenheit geraten sind. Bei diesen Themen hat mir das Tutorial geholfen, mein Wissen wieder aufzufrischen.
 
 === Was ich noch Anschauen will
 
+Obwohl mir die Java-Grundlagen bereits bekannt sind, möchte ich gewisse Themen nochmals gezielt vertiefen. Besonders OOP1 und OOP2 möchte ich repetieren, da ich gemerkt habe, dass einige Details mit der Zeit in Vergessenheit geraten sind.
 
+Danach möchte ich mich wieder stärker mit fortgeschrittenen Java-Themen wie Generics, Concurrency und der Stream-API beschäftigen.
 
