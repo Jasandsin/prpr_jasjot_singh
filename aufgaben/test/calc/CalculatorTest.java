@@ -3,7 +3,6 @@ package calc;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class CalculatorTest {
 
@@ -57,6 +56,7 @@ public class CalculatorTest {
     void division() {
         assertEquals("1.0", Calculator.evaluate("5/5"));
         assertEquals("-1.0", Calculator.evaluate("2.5/-2.5"));
+        assertEquals("2.0", Calculator.evaluate("10/5"));
     }
 
     @Test
@@ -71,4 +71,20 @@ public class CalculatorTest {
     void invalidOperator() {
         assertEquals("invalid operator", Calculator.evaluate("1 # 2"));
     }
+
+    @Test
+    void invalidNumber(){
+        assertEquals("invalid number", Calculator.evaluate("-"));
+    }
+
+    @Test
+    void tooManyDigits(){
+        assertEquals("invalid number", Calculator.evaluate("123456789101215"));
+    }
+
+    @Test
+    void tooManyDecimals(){
+        assertEquals("invalid number", Calculator.evaluate("1.12345678910"));
+    }
+
 }

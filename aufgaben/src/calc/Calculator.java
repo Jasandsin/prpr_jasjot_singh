@@ -8,14 +8,14 @@ public class Calculator {
         /* This utility class should not be instantiated */
     }
 
-    public static final int MAX_DIGITS = 15; // maximum number of digits in a number
+    public static final int MAX_DIGITS = 15;
     public static final int MAX_DECIMALS = 10;
 
     /**
      * Parses and evaluates a simple expression of the form "x" or "x op y", where "x" and "y" are decimal numbers
      * and "op" is "+", "-", "*", or "/". Spaces between or around "x", "y" and "op" are ignored.
      * <p>
-     * If "x" or "y" is not a valid number (see {@link #num(String, int)}), the string "invalid number" is returned. If "op" is not one of the operators listed above, the string
+     * If "x" or "y" is not a valid number (see {@link #num(String, int)}), the string "invalid number" is returned. If "operator" is not one of the operators listed above, the string
      * "invalid operator" is returned.
      */
     public static String evaluate(String expr) {
@@ -47,6 +47,7 @@ public class Calculator {
             return "invalid number";
         }
         secondNumber = Double.parseDouble(expr.substring(index, end));
+
         switch (operator) {
         case '+' -> {
             return Double.toString(firstNumber + secondNumber);
