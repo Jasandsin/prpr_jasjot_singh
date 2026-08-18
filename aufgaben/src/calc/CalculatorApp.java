@@ -25,5 +25,6 @@ public class CalculatorApp {
             System.out.print("\ncalc> ");
             line = scanner.nextLine();
         }
+
     }
 }

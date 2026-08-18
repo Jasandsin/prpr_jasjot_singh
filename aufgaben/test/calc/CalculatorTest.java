@@ -75,11 +75,12 @@ public class CalculatorTest {
     @Test
     void invalidNumber(){
         assertEquals("invalid number", Calculator.evaluate("-"));
+        assertEquals("invalid number", Calculator.evaluate("."));
     }
 
     @Test
     void tooManyDigits(){
-        assertEquals("invalid number", Calculator.evaluate("123456789101215"));
+        assertEquals("invalid number", Calculator.evaluate("12345678910121516"));
     }
 
     @Test

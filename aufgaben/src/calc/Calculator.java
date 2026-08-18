@@ -59,7 +59,7 @@ public class Calculator {
             return Double.toString(firstNumber * secondNumber);
         }
         case '/' -> {
-            return "" + secondNumber / firstNumber;
+            return Double.toString(firstNumber / secondNumber);
         }
         default -> {
             return "invalid operator";
@@ -89,6 +89,8 @@ public class Calculator {
     private static int num(String s, int startIndex) {
 
         int index = startIndex;
+        int digitCount = 0;
+        int decimalCount = 0;
 
         boolean check = false;
         if (charFinder(s, index) == '-') {
@@ -96,16 +98,20 @@ public class Calculator {
         }
         while (isDigit(charFinder(s, index))) {
             index++;
-            check = false;
+            digitCount++;
+            check = true;
         }
         if (charFinder(s, index) == '.') {
             index++;
             while (isDigit(charFinder(s, index))) {
                 index++;
+                digitCount++;
+                decimalCount++;
+                check = true;
+
             }
-            check = false;
         }
-        if (!check) {
+        if (check && digitCount <= MAX_DIGITS && decimalCount <= MAX_DECIMALS) {
             return index;
         } else {
             return -1;
