@@ -5,9 +5,9 @@
 :table-frame: ends
 :table-stripes: even
 
-Bearbeitet durch: _Vorname Nachname_
+Bearbeitet durch: Jasjot Singh
 
-E-Mail: _...@students.fhnw.ch_
+E-Mail: jasjot.singh@students.fhnw.ch
 
 '''
 == Do's
@@ -19,11 +19,16 @@ IMPORTANT: KI die Reflexion schreiben lassen.
 '''
 
 === Was habe ich heute gemacht?
-* erstelle pro Tag einen Abschnitt
+
+Heute habe ich die Calc aufgabe gelöst. Ich habe mit der Aufräum Checkliste den code angeschaut und währendssen Fehler gefunden. Diese habe ich das in der Test klassen getestet und bestätigt das es fehler waren. Danach habe ich die fehler gelöst.
 
 === Spass gemacht hat?
 
+Es war mal Interessant nur aufzuräumen ohne direkt die logik zu ändern. Wie zum Beispiel bei secondNumber/firstNumber sah ich direkt den Fehler aber ich konnte es noch nicht fixen. Da ich es erst mit ein test beweisen ,usste das es falsch ist und danach verbessern.
+
 === Mühsam war?
+
+Nicht direkt Fehler bzw. Logik korrigieren.
 
 === Was ich noch Anschauen will
 

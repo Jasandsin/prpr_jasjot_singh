@@ -22,6 +22,8 @@ public class CasualTime {
     }
 
     public static String convertToCasual(String formal) {
+
+
         // TODO: Zeitangabe in Parameter 'formal' in Stunde und Minute
         //  aufteilen und anschliessend in Umgangssprache umwandeln.
         //  Tipp: Methoden 'split' von String und 'Integer.parseInt'.
