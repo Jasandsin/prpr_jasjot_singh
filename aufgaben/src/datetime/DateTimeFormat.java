@@ -2,11 +2,7 @@ package datetime;
 
 public interface DateTimeFormat {
 
-    static String formateDate(int year, int month, int day){
-        return "";
-    }
+    String formatDate(int year, int month, int day);
 
-    static String formatTime(int hour, int minute){
-        return "";
-    }
+    String formatTime(int hour, int minute);
 }
