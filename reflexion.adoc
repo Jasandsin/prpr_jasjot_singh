@@ -26,7 +26,7 @@ Bei CasualTime habe ich eine normale Uhrzeit HH:MM in eine sprachliche Uhrzeit u
 
 Bei der DateTime Aufgabe musste ich Text mit Elementen in formatierten Casual- und Formal-Text umwandeln. Mit dem Interface und den Klassen Formal und Casual konnte ich im TextFormatter Datum und Uhrzeit erkennen und formatieren. Dabei habe ich mit Scanner gearbeitet und Tests für die verschiedenen Fälle Casual / Formal geschrieben.
 
-
+Bei der Morse Aufgabe habe ich einen Binärbaum mit der Klasse MorseNode erstellt. Danach bin ich je nach Punkt oder Strich durch den Baum gegangen und habe den Text als String ausgegeben.
 === Spass gemacht hat?
 
 Es war mal interessant, nur aufzuräumen, ohne direkt die Logik zu ändern. Wie zum Beispiel bei secondNumber/firstNumber sah ich direkt den Fehler, aber ich konnte ihn noch nicht fixen. Da ich erst mit einem Test beweisen musste, dass es falsch ist und es danach verbessern konnte.
@@ -35,6 +35,7 @@ Bei CasualTime war es sehr spannend, wieder mal so viele if-Statements zu erstel
 
 Bei der DateTime Aufgabe war es interessant, mal wieder zu sehen, wie nützlich so ein Interface sein kann. Auch das Formatieren von dem Text war spannend zu machen und zu testen.
 
+Es hat Spass gemacht, den Baum mit den verschiedenen Punkt- und Strich-Kombinationen zu erstellen. Es war interessant, das mal wieder im Code zu erstellen, weil ich die Theorie schon im Unterricht durchgenommen habe.
 
 === Mühsam war?
 
@@ -43,6 +44,8 @@ Nicht direkt Fehler bzw. Logik korrigieren.
 Bei CasualTime war es ein wenig komplex, da ich viele if-Statements und auch if-else gebraucht habe.
 
 Bei DateTime war es am Anfang noch schwierig, die ganzen Zusammenhänge zu verstehen.
+
+Sehr viel wiederholung beim schreiben des Baumes.
 
 === Was ich noch Anschauen will
 

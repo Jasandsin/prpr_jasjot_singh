@@ -28,6 +28,16 @@ public class MorseDecoder {
         root.punkt.strich.strich.punkt = new MorseNode("P");
         root.punkt.strich.strich.strich = new MorseNode("J");
 
+        root.punkt.punkt.punkt.punkt.punkt = new MorseNode("5");
+        root.punkt.punkt.punkt.punkt.strich = new MorseNode("4");
+        root.punkt.punkt.punkt.strich.strich = new MorseNode("3");
+        root.punkt.punkt.punkt.strich.punkt = new MorseNode("Verstanden");
+        root.punkt.punkt.strich.punkt.punkt = new MorseNode("é");
+        root.punkt.punkt.strich.strich.punkt = new MorseNode("");
+        root.punkt.punkt.strich.strich.strich = new MorseNode("2");
+        root.punkt.strich.punkt.strich.punkt = new MorseNode("Ende");
+        root.punkt.strich.strich.strich.strich = new MorseNode("1");
+
         // Rechte seite Baum
         root.strich = new MorseNode("T");
 
@@ -48,11 +58,22 @@ public class MorseDecoder {
         root.strich.strich.strich.punkt = new MorseNode("Ö");
         root.strich.strich.strich.strich = new MorseNode("CH");
 
+        root.strich.punkt.punkt.punkt.punkt = new MorseNode("6");
+        root.strich.punkt.punkt.punkt.strich = new MorseNode("Abschnitt");
+        root.strich.punkt.punkt.strich.punkt = new MorseNode("/");
+        root.strich.punkt.strich.strich.punkt = new MorseNode("");
+        root.strich.strich.punkt.punkt.punkt = new MorseNode("7");
+        root.strich.strich.punkt.punkt.strich = new MorseNode("");
+        root.strich.strich.strich.punkt.punkt = new MorseNode("8");
+        root.strich.strich.strich.strich.punkt = new MorseNode("9");
+        root.strich.strich.strich.strich.strich = new MorseNode("0");
+
     }
 
     public String decode(String code) {
 
         MorseNode current = root;
+        String word = "";
 
         for (int i = 0; i < code.length(); i++) {
 
@@ -66,8 +87,18 @@ public class MorseDecoder {
 
                 current = current.strich;
 
+            } else if (c == ' ') {
+
+                if (i > 0 && code.charAt(i - 1) == ' ') {
+                    word = word + " "; // Abstand zwishen wörtern, wenn zwei leerzeichen
+                } else {
+                    word = word + current.text; // Wort erstellung fertig und zu word (ergebnis) hinzufügen
+                    current = root; // neues Wort starten von root aus
+                }
             }
         }
-        return current.text;
+
+
+        return word + current.text;
     }
 }
