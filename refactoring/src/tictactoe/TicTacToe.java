@@ -11,6 +11,10 @@ public class TicTacToe {
         moves = 0;
     }
 
+    boolean getField(int row, int col) {
+        return board[row][col] == 1;
+    }
+
     void play(int row, int col) {
         if (board[row][col] == 0) {
             board[row][col] = moves % 2 + 1;
