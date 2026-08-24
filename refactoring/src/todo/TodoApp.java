@@ -22,7 +22,6 @@ public class TodoApp {
 
     private static final int WIDTH = 400;
     private static final int HEIGHT = 300;
-    private final Gui gui = Gui.create("Todo List", WIDTH, HEIGHT);
     private String currentTask = "";
 
     public static void main(String[] args) {
@@ -30,6 +29,7 @@ public class TodoApp {
     }
 
     private void createAndShowGUI(final TaskManager taskManager) {
+        var gui = Gui.create("Todo List", WIDTH, HEIGHT);
         gui.setFontSize(16);
 
         var textField = new TextField(10, 10, 380, 30) {
