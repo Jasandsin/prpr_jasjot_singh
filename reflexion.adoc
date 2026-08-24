@@ -27,6 +27,9 @@ Bei CasualTime habe ich eine normale Uhrzeit HH:MM in eine sprachliche Uhrzeit u
 Bei der DateTime Aufgabe musste ich Text mit Elementen in formatierten Casual- und Formal-Text umwandeln. Mit dem Interface und den Klassen Formal und Casual konnte ich im TextFormatter Datum und Uhrzeit erkennen und formatieren. Dabei habe ich mit Scanner gearbeitet und Tests für die verschiedenen Fälle Casual / Formal geschrieben.
 
 Bei der Morse Aufgabe habe ich einen Binärbaum mit der Klasse MorseNode erstellt. Danach bin ich je nach Punkt oder Strich durch den Baum gegangen und habe den Text als String ausgegeben.
+
+Bei der WordWrap Aufgabe musste ich einen Konstruktor und die dazugehörige wrap Methode implementieren, sodass man durch eine maximale Anzahl Zeichen in einer Zeile automatisch Umbrüche erstellt.
+
 === Spass gemacht hat?
 
 Es war mal interessant, nur aufzuräumen, ohne direkt die Logik zu ändern. Wie zum Beispiel bei secondNumber/firstNumber sah ich direkt den Fehler, aber ich konnte ihn noch nicht fixen. Da ich erst mit einem Test beweisen musste, dass es falsch ist und es danach verbessern konnte.
@@ -36,6 +39,8 @@ Bei CasualTime war es sehr spannend, wieder mal so viele if-Statements zu erstel
 Bei der DateTime Aufgabe war es interessant, mal wieder zu sehen, wie nützlich so ein Interface sein kann. Auch das Formatieren von dem Text war spannend zu machen und zu testen.
 
 Es hat Spass gemacht, den Baum mit den verschiedenen Punkt- und Strich-Kombinationen zu erstellen. Es war interessant, das mal wieder im Code zu erstellen, weil ich die Theorie schon im Unterricht durchgenommen habe.
+
+s war interessant, durch vorhandenen Code in der adoc Datei die Methode und den Konstruktor zu erstellen. Ich musste zuerst überlegen, wie ich vorgehen soll und welche Tests ich schreiben muss.
 
 === Mühsam war?
 
@@ -47,6 +52,8 @@ Bei DateTime war es am Anfang noch schwierig, die ganzen Zusammenhänge zu verst
 
 Sehr viel wiederholung beim schreiben des Baumes.
 
+Bei der WordWrap Aufgabe war es mühsam, sich Tests zu überlegen und zu schauen, ob man alle Fälle abgedeckt hat.
+
 === Was ich noch Anschauen will
 
 Ich werde sicher später wieder mal solche Checklisten benutzen oder eventuell selber eine erstellen.
@@ -54,6 +61,7 @@ Ich werde sicher später wieder mal solche Checklisten benutzen oder eventuell s
 Ich werde nochmals genauer anschauen, welche Vorteile Interfaces haben können.
 
 Schleifen waren für mich schon immer ein interessantes, aber auch schwieriges Thema. Das werde ich weiterhin anschauen.
+
 
 
 '''
