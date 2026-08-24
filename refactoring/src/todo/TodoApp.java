@@ -46,14 +46,14 @@ public class TodoApp {
         textField.setTextColor(new Color(0, 0, 0));
 
         var textArea = new TextArea(10, 20 + textField.getHeight(), 380, 200);
-        textArea.setText(TaskManager.printTaskList(tasks));
+        textArea.setText(new TaskManager().printTaskList(tasks));
 
         var addButton = new Button("Add", WIDTH - 120, HEIGHT - 40, 50, 30) {
             public void onLeftClick(double _x, double _y) {
                 if (!currentTask.isEmpty()) {
                     tasks.add(currentTask);
                 }
-                textArea.setText(TaskManager.printTaskList(tasks));
+                textArea.setText(new TaskManager().printTaskList(tasks));
                 currentTask = "";
                 textField.setText("");
             }
