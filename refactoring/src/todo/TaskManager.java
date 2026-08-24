@@ -10,13 +10,13 @@ public class TaskManager {
         tasks.clear();
     }
 
-    void addTask(TodoApp todoApp) {
-        if (!todoApp.currentTask.isEmpty()) {
-            todoApp.tasks.add(todoApp.currentTask);
+    void addTask(String task) {
+        if (!task.isEmpty()) {
+            tasks.add(task);
         }
     }
 
-    String printTaskList(List<String> tasks) {
+    String printTaskList() {
         StringBuilder taskList = new StringBuilder();
         for (int i = 0; i < tasks.size(); i++) {
             taskList.append(i + 1).append(". ").append(tasks.get(i)).append("\n");
