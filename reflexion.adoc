@@ -59,6 +59,7 @@ Sehr viel wiederholung beim schreiben des Baumes.
 Bei der WordWrap Aufgabe war es mühsam, sich Tests zu überlegen und zu schauen, ob man alle Fälle abgedeckt hat.
 
 Beim Refactoring musste man genau schauen, was man wohin verschiebt. Vor allem wenn eine Methode viele Verbindungen zu anderen Methoden oder Variablen hatte, entstanden beim Verschieben mehrere Stellen, die danach noch angepasst werden mussten. Das war bei TicTacToe teilweise etwas mühsam.
+
 === Was ich noch Anschauen will
 
 Ich werde sicher später wieder mal solche Checklisten benutzen oder eventuell selber eine erstellen.
