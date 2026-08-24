@@ -17,7 +17,6 @@ public class TicTacToeApp {
     }
 
     private final Gui gui = Gui.create("Tic Tac Toe", BOARD_SIZE, BOARD_SIZE);
-    private int[][] board;
     private int moves;
 
     private void start() {

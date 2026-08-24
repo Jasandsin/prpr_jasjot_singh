@@ -2,6 +2,8 @@ package tictactoe;
 
 public class TicTacToe {
 
+    private int[][] board;
+
     int getWinner(TicTacToeApp ticTacToeApp) {
         for (int i = 0; i < 3; i++) {
             if (ticTacToeApp.board[i][0] != 0 &&
