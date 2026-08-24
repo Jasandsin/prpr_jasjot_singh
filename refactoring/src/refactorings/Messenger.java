@@ -8,12 +8,7 @@ public class Messenger {
     }
 
     public void printMessage() {
-        String message = getMessage();
-        print(message);
-    }
-
-    private void print(String message){
-        System.out.println(message);
+        System.out.println(getMessage());
     }
 
     public String getMessage() {

@@ -9,6 +9,7 @@ public class Product {
         this.price = price;
     }
 
+
     public double getPrice() {
         return price;
     }

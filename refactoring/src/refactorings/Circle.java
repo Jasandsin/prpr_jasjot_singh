@@ -1,8 +1,26 @@
 package refactorings;
 
 public class Circle {
-    public void printInfo() {
-        System.out.println(2 * Math.PI * 10);
-        System.out.println(Math.PI * 10 * 10);
+
+    private final int radius;
+
+    public Circle() {
+        radius = 10;
     }
+
+    public void printInfo() {
+        System.out.println(diameter());
+        System.out.println(area());
+    }
+
+
+    public double area() {
+        return Math.PI * radius * radius;
+    }
+
+    public double diameter() {
+        return 2 * Math.PI * radius;
+    }
+    
+    
 }
