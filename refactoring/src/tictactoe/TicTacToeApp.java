@@ -17,9 +17,10 @@ public class TicTacToeApp {
     }
 
     private final Gui gui = Gui.create("Tic Tac Toe", BOARD_SIZE, BOARD_SIZE);
+    private TicTacToe game;
 
     private void start() {
-        moves = 0;
+        game = new TicTacToe();
 
         drawBoard();
         gui.open();
@@ -28,10 +29,10 @@ public class TicTacToeApp {
             if (gui.wasLeftMouseButtonClicked()) {
                 int row = (int) (gui.getMouseY() - MARGIN / 2) / (FIELD_SIZE + MARGIN);
                 int col = (int) (gui.getMouseX() - MARGIN / 2) / (FIELD_SIZE + MARGIN);
-                TicTacToe.play(row, col);
+                game.play(row, col);
             }
 
-            if (new TicTacToe().getWinner(this) != 0 || moves == 9) {
+            if (game.isOver()) {
                 do {
                     drawBoard();
                     gui.refreshAndClear(20);
@@ -45,6 +46,10 @@ public class TicTacToeApp {
             drawBoard();
             gui.refreshAndClear(20);
         }
+    }
+
+    private boolean isOver() {
+        return getWinner() != 0 || moves == 9;
     }
 
     private void drawBoard() {
@@ -76,7 +81,7 @@ public class TicTacToeApp {
     }
 
     private Color getXColor() {
-        if (new TicTacToe().getWinner(this) == 2 || moves == 9 && new TicTacToe().getWinner(this) != 1) {
+        if (game.getWinner() == 2 || moves == 9 && game.getWinner() != 1) {
             return GAME_OVER_COLOR;
         } else {
             return new Color(200, 50, 50);
@@ -84,7 +89,7 @@ public class TicTacToeApp {
     }
 
     private Color getOColor() {
-        if (new TicTacToe().getWinner(this) == 1 || moves == 9 && new TicTacToe().getWinner(this) != 2) {
+        if (game.getWinner() == 1 || moves == 9 && game.getWinner() != 2) {
             return GAME_OVER_COLOR;
         } else {
             return new Color(40, 40, 220);
