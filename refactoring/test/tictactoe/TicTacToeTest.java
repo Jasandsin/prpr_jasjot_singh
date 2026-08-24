@@ -68,6 +68,97 @@ public class TicTacToeTest {
     }
 
     @Test
+    void xGewinntZweiteReihe() {
+        TicTacToe game = new TicTacToe();
+
+        game.play(1, 0);
+        game.play(0, 0); 
+        game.play(1, 1); 
+        game.play(0, 1); 
+        game.play(1, 2); 
+
+        assertEquals(Player.X, game.getWinner());
+    }
+
+    @Test
+    void xGewinntDritteReihe() {
+        TicTacToe game = new TicTacToe();
+
+        game.play(2, 0); 
+        game.play(0, 0); 
+        game.play(2, 1); 
+        game.play(0, 1); 
+        game.play(2, 2); 
+
+        assertEquals(Player.X, game.getWinner());
+    }
+
+    @Test
+    void xGewinntErsteSpalte() {
+        TicTacToe game = new TicTacToe();
+
+        game.play(0, 0); 
+        game.play(0, 1); 
+        game.play(1, 0); 
+        game.play(1, 1); 
+        game.play(2, 0); 
+
+        assertEquals(Player.X, game.getWinner());
+    }
+
+    @Test
+    void xGewinntZweiteSpalte() {
+        TicTacToe game = new TicTacToe();
+
+        game.play(0, 1); 
+        game.play(0, 0); 
+        game.play(1, 1); 
+        game.play(1, 0); 
+        game.play(2, 1); 
+
+        assertEquals(Player.X, game.getWinner());
+    }
+
+    @Test
+    void xGewinntDritteSpalte() {
+        TicTacToe game = new TicTacToe();
+
+        game.play(0, 2); 
+        game.play(0, 0); 
+        game.play(1, 2); 
+        game.play(1, 0); 
+        game.play(2, 2); 
+
+        assertEquals(Player.X, game.getWinner());
+    }
+
+    @Test
+    void xGewinntDiagonaleLinksNachRechts() {
+        TicTacToe game = new TicTacToe();
+
+        game.play(0, 0); 
+        game.play(0, 1); 
+        game.play(1, 1); 
+        game.play(0, 2); 
+        game.play(2, 2); 
+
+        assertEquals(Player.X, game.getWinner());
+    }
+
+    @Test
+    void xGewinntDiagonaleRechtsNachLinks() {
+        TicTacToe game = new TicTacToe();
+
+        game.play(0, 2); 
+        game.play(0, 0); 
+        game.play(1, 1); 
+        game.play(0, 1); 
+        game.play(2, 0); 
+
+        assertEquals(Player.X, game.getWinner());
+    }
+
+    @Test
     void belegtesFeldWirdIgnoriert() {
         TicTacToe game = new TicTacToe();
 

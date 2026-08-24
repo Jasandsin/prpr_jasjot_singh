@@ -30,6 +30,8 @@ Bei der Morse Aufgabe habe ich einen Binärbaum mit der Klasse MorseNode erstell
 
 Bei der WordWrap Aufgabe musste ich einen Konstruktor und die dazugehörige wrap Methode implementieren, sodass man durch eine maximale Anzahl Zeichen in einer Zeile automatisch Umbrüche erstellt.
 
+Ich habe die Refactoring-Aufgaben ToDo und TicTacToe gemacht. Bei der ToDo-Aufgabe musste ich verschiedene Methoden und Variablen extrahieren und in eine neue Klasse verschieben. Bei TicTacToe war das Ganze etwas aufwendiger. Dort habe ich die Spiellogik von der GUI getrennt und in eigene Klassen ausgelagert. Dabei habe ich verschiedene Refactoring-Funktionen von IntelliJ benutzt, zum Beispiel Extract Method und Move. Am Schluss habe ich für die Spiellogik noch Unit-Tests geschrieben. Dabei habe ich auch die richtige art des commitens benutzt.
+
 === Spass gemacht hat?
 
 Es war mal interessant, nur aufzuräumen, ohne direkt die Logik zu ändern. Wie zum Beispiel bei secondNumber/firstNumber sah ich direkt den Fehler, aber ich konnte ihn noch nicht fixen. Da ich erst mit einem Test beweisen musste, dass es falsch ist und es danach verbessern konnte.
@@ -41,6 +43,8 @@ Bei der DateTime Aufgabe war es interessant, mal wieder zu sehen, wie nützlich 
 Es hat Spass gemacht, den Baum mit den verschiedenen Punkt- und Strich-Kombinationen zu erstellen. Es war interessant, das mal wieder im Code zu erstellen, weil ich die Theorie schon im Unterricht durchgenommen habe.
 
 s war interessant, durch vorhandenen Code in der adoc Datei die Methode und den Konstruktor zu erstellen. Ich musste zuerst überlegen, wie ich vorgehen soll und welche Tests ich schreiben muss.
+
+Es war sehr interessant, die Refactoring-Funktionen zu benutzen. Ich muss sagen, dass ich diese bis jetzt fast nie benutzt habe. Deshalb hat mir die Aufgabe geholfen, mich in diesem Bereich zu verbessern. Es war spannend zu sehen, wie man Methoden extrahieren oder verschieben kann und IntelliJ die betroffenen Stellen automatisch anpasst.
 
 === Mühsam war?
 
@@ -54,6 +58,7 @@ Sehr viel wiederholung beim schreiben des Baumes.
 
 Bei der WordWrap Aufgabe war es mühsam, sich Tests zu überlegen und zu schauen, ob man alle Fälle abgedeckt hat.
 
+Beim Refactoring musste man genau schauen, was man wohin verschiebt. Vor allem wenn eine Methode viele Verbindungen zu anderen Methoden oder Variablen hatte, entstanden beim Verschieben mehrere Stellen, die danach noch angepasst werden mussten. Das war bei TicTacToe teilweise etwas mühsam.
 === Was ich noch Anschauen will
 
 Ich werde sicher später wieder mal solche Checklisten benutzen oder eventuell selber eine erstellen.
@@ -62,6 +67,7 @@ Ich werde nochmals genauer anschauen, welche Vorteile Interfaces haben können.
 
 Schleifen waren für mich schon immer ein interessantes, aber auch schwieriges Thema. Das werde ich weiterhin anschauen.
 
+Refactoring ist sicher ein Thema, das ich mir noch genauer anschauen möchte, weil ich die Refactoring-Funktionen von IntelliJ bis jetzt im Studium eigentlich kaum benutzt habe. Ich möchte vor allem noch besser verstehen, wann welches Refactoring sinnvoll ist.
 
 
 '''
