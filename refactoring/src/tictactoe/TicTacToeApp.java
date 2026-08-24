@@ -28,10 +28,7 @@ public class TicTacToeApp {
             if (gui.wasLeftMouseButtonClicked()) {
                 int row = (int) (gui.getMouseY() - MARGIN / 2) / (FIELD_SIZE + MARGIN);
                 int col = (int) (gui.getMouseX() - MARGIN / 2) / (FIELD_SIZE + MARGIN);
-                if (board[row][col] == 0) {
-                    board[row][col] = moves % 2 + 1;
-                    moves++;
-                }
+                TicTacToe.play(row, col);
             }
 
             if (new TicTacToe().getWinner(this) != 0 || moves == 9) {

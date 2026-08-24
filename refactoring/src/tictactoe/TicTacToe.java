@@ -11,6 +11,13 @@ public class TicTacToe {
         moves = 0;
     }
 
+    static void play(int row, int col) {
+        if (board[row][col] == 0) {
+            board[row][col] = moves % 2 + 1;
+            moves++;
+        }
+    }
+
     int getWinner() {
         for (int i = 0; i < 3; i++) {
             if (board[i][0] != 0 &&
