@@ -39,8 +39,7 @@ public class TicTacToeApp {
                 } while (gui.isOpen() && !gui.wasLeftMouseButtonClicked());
 
                 // start new game
-                board = new int[3][3];
-                moves = 0;
+                game = new TicTacToe();
             }
 
             drawBoard();
@@ -59,7 +58,7 @@ public class TicTacToeApp {
                 gui.fillRect(x, y, FIELD_SIZE, FIELD_SIZE);
 
                 gui.setStrokeWidth(20);
-                if (game.getField(row, col) == 1) {
+                if (game.getField(row, col) == Player.X) {
                     gui.setColor(getXColor());
                     gui.drawLine(
                             x + PADDING, y + PADDING,
@@ -67,7 +66,7 @@ public class TicTacToeApp {
                     gui.drawLine(
                             x + FIELD_SIZE - PADDING, y + PADDING,
                             x + PADDING, y + FIELD_SIZE - PADDING);
-                } else if (game.getField(row, col) == 2) {
+                } else if (game.getField(row, col) == Player.O) {
                     gui.setColor(getOColor());
                     gui.drawOval(x + PADDING, y + PADDING,
                             FIELD_SIZE - 2 * PADDING, FIELD_SIZE - 2 * PADDING);
@@ -77,7 +76,7 @@ public class TicTacToeApp {
     }
 
     private Color getXColor() {
-        if (game.getWinner() == 2 || moves == 9 && game.getWinner() != 1) {
+        if (game.isOver() && game.getWinner() != Player.X) {
             return GAME_OVER_COLOR;
         } else {
             return new Color(200, 50, 50);
@@ -85,7 +84,7 @@ public class TicTacToeApp {
     }
 
     private Color getOColor() {
-        if (game.getWinner() == 1 || moves == 9 && game.getWinner() != 2) {
+        if (game.isOver() && game.getWinner() != Player.O) {
             return GAME_OVER_COLOR;
         } else {
             return new Color(40, 40, 220);
