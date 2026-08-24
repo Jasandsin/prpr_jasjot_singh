@@ -46,7 +46,7 @@ public class TodoApp {
 
         var addButton = new Button("Add", WIDTH - 120, HEIGHT - 40, 50, 30) {
             public void onLeftClick(double _x, double _y) {
-                new TaskManager().addTask(currentTask);
+                taskManager.addTask(currentTask);
                 textArea.setText(taskManager.printTaskList());
                 currentTask = "";
                 textField.setText("");
@@ -54,7 +54,7 @@ public class TodoApp {
         };
         var clearButton = new Button("Clear", WIDTH - 60, HEIGHT - 40, 50, 30) {
             public void onLeftClick(double _x, double _y) {
-                new TaskManager().clear();
+                taskManager.clear();
                 currentTask = "";
                 textField.setTextColor(new Color(100, 100, 100));
                 textField.setText("Add new Task");
