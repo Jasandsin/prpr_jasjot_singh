@@ -1,5 +1,7 @@
 package tictactoe;
 
+import jakarta.annotation.Nonnull;
+
 public class TicTacToe {
 
     private Player[][] board;
@@ -17,9 +19,14 @@ public class TicTacToe {
 
     void play(int row, int col) {
         if (board[row][col] == null) {
-            board[row][col] = moves % 2 == 0 ? Player.X : Player.O;
+            board[row][col] = getCurrentPlayer();
             moves++;
         }
+    }
+
+    @Nonnull
+    private Player getCurrentPlayer() {
+        return moves % 2 == 0 ? Player.X : Player.O;
     }
 
     Player getWinner() {
