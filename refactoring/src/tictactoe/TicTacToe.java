@@ -1,7 +1,5 @@
 package tictactoe;
 
-import jakarta.annotation.Nonnull;
-
 public class TicTacToe {
 
     private Player[][] board;
@@ -18,14 +16,22 @@ public class TicTacToe {
     }
 
     void play(int row, int col) {
+        if (row < 0 || row >= 3 || col < 0 || col >= 3) {
+            throw new IllegalArgumentException();
+        }
+        if (isOver()) {
+            throw new IllegalStateException();
+        }
         if (board[row][col] == null) {
             board[row][col] = getCurrentPlayer();
             moves++;
         }
     }
 
-    @Nonnull
-    private Player getCurrentPlayer() {
+    Player getCurrentPlayer() {
+        if (isOver()) {
+            throw new IllegalStateException();
+        }
         return moves % 2 == 0 ? Player.X : Player.O;
     }
 
