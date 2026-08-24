@@ -1,8 +1,5 @@
 package todo;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import ch.trick17.gui.Color;
 import ch.trick17.gui.Gui;
 import ch.trick17.gui.widget.TextField;
@@ -57,7 +54,7 @@ public class TodoApp {
         };
         var clearButton = new Button("Clear", WIDTH - 60, HEIGHT - 40, 50, 30) {
             public void onLeftClick(double _x, double _y) {
-                clear();
+                new TaskManager().clear();
                 currentTask = "";
                 textField.setTextColor(new Color(100, 100, 100));
                 textField.setText("Add new Task");
@@ -68,10 +65,6 @@ public class TodoApp {
         gui.addComponents(textField, textArea, addButton, clearButton);
         gui.open();
         gui.runUntilClosed();
-    }
-
-    private static void clear() {
-        tasks.clear();
     }
 
 

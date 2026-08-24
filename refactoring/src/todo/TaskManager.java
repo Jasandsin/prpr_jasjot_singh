@@ -6,6 +6,10 @@ import java.util.List;
 public class TaskManager {
     private final List<String> tasks = new ArrayList<>();
 
+    void clear() {
+        tasks.clear();
+    }
+
     void addTask(TodoApp todoApp) {
         if (!todoApp.currentTask.isEmpty()) {
             todoApp.tasks.add(todoApp.currentTask);
