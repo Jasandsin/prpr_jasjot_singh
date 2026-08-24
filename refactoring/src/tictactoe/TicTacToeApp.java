@@ -59,7 +59,7 @@ public class TicTacToeApp {
                 gui.fillRect(x, y, FIELD_SIZE, FIELD_SIZE);
 
                 gui.setStrokeWidth(20);
-                if (new TicTacToe().getField(row, col)) {
+                if (game.getField(row, col) == 1) {
                     gui.setColor(getXColor());
                     gui.drawLine(
                             x + PADDING, y + PADDING,
@@ -67,7 +67,7 @@ public class TicTacToeApp {
                     gui.drawLine(
                             x + FIELD_SIZE - PADDING, y + PADDING,
                             x + PADDING, y + FIELD_SIZE - PADDING);
-                } else if (board[row][col] == 2) {
+                } else if (game.getField(row, col) == 2) {
                     gui.setColor(getOColor());
                     gui.drawOval(x + PADDING, y + PADDING,
                             FIELD_SIZE - 2 * PADDING, FIELD_SIZE - 2 * PADDING);

@@ -11,8 +11,8 @@ public class TicTacToe {
         moves = 0;
     }
 
-    boolean getField(int row, int col) {
-        return board[row][col] == 1;
+    int getField(int row, int col) {
+        return board[row][col];
     }
 
     void play(int row, int col) {
