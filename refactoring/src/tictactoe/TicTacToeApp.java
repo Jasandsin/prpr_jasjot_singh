@@ -19,34 +19,6 @@ public class TicTacToeApp {
     private final Gui gui = Gui.create("Tic Tac Toe", BOARD_SIZE, BOARD_SIZE);
     private TicTacToe game;
 
-    private void drawBoard() {
-        gui.setColor(220, 220, 220);
-        gui.fillRect(0, 0, BOARD_SIZE, BOARD_SIZE);
-        for (int row = 0; row < 3; row++) {
-            for (int col = 0; col < 3; col++) {
-                var x = col * FIELD_SIZE + (col + 1) * MARGIN;
-                var y = row * FIELD_SIZE + (row + 1) * MARGIN;
-                gui.setColor(255, 255, 255);
-                gui.fillRect(x, y, FIELD_SIZE, FIELD_SIZE);
-
-                gui.setStrokeWidth(20);
-                if (game.getField(row, col) == Player.X) {
-                    gui.setColor(getXColor());
-                    gui.drawLine(
-                            x + PADDING, y + PADDING,
-                            x + FIELD_SIZE - PADDING, y + FIELD_SIZE - PADDING);
-                    gui.drawLine(
-                            x + FIELD_SIZE - PADDING, y + PADDING,
-                            x + PADDING, y + FIELD_SIZE - PADDING);
-                } else if (game.getField(row, col) == Player.O) {
-                    gui.setColor(getOColor());
-                    gui.drawOval(x + PADDING, y + PADDING,
-                            FIELD_SIZE - 2 * PADDING, FIELD_SIZE - 2 * PADDING);
-                }
-            }
-        }
-    }
-
     private Color getXColor() {
         if (game.isOver() && game.getWinner() != Player.X) {
             return GAME_OVER_COLOR;
