@@ -1,10 +1,10 @@
 package todo;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class TaskManager {
-    public TaskManager() {
-    }
+    private final List<String> tasks = new ArrayList<>();
 
     void addTask(TodoApp todoApp) {
         if (!todoApp.currentTask.isEmpty()) {

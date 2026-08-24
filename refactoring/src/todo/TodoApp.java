@@ -23,7 +23,6 @@ import ch.trick17.gui.widget.Button;
  */
 public class TodoApp {
 
-    private final List<String> tasks = new ArrayList<>();
     private static final int WIDTH = 400;
     private static final int HEIGHT = 300;
     private final Gui gui = Gui.create("Todo List", WIDTH, HEIGHT);
