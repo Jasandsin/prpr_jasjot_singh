@@ -42,7 +42,7 @@ Bei der DateTime Aufgabe war es interessant, mal wieder zu sehen, wie nützlich 
 
 Es hat Spass gemacht, den Baum mit den verschiedenen Punkt- und Strich-Kombinationen zu erstellen. Es war interessant, das mal wieder im Code zu erstellen, weil ich die Theorie schon im Unterricht durchgenommen habe.
 
-s war interessant, durch vorhandenen Code in der adoc Datei die Methode und den Konstruktor zu erstellen. Ich musste zuerst überlegen, wie ich vorgehen soll und welche Tests ich schreiben muss.
+Es war interessant, durch vorhandenen Code in der adoc Datei die Methode und den Konstruktor zu erstellen. Ich musste zuerst überlegen, wie ich vorgehen soll und welche Tests ich schreiben muss.
 
 Es war sehr interessant, die Refactoring-Funktionen zu benutzen. Ich muss sagen, dass ich diese bis jetzt fast nie benutzt habe. Deshalb hat mir die Aufgabe geholfen, mich in diesem Bereich zu verbessern. Es war spannend zu sehen, wie man Methoden extrahieren oder verschieben kann und IntelliJ die betroffenen Stellen automatisch anpasst.
 
