@@ -19,19 +19,4 @@ public class TicTacToeApp {
     private final Gui gui = Gui.create("Tic Tac Toe", BOARD_SIZE, BOARD_SIZE);
     private TicTacToe game;
 
-    private Color getXColor() {
-        if (game.isOver() && game.getWinner() != Player.X) {
-            return GAME_OVER_COLOR;
-        } else {
-            return new Color(200, 50, 50);
-        }
-    }
-
-    private Color getOColor() {
-        if (game.isOver() && game.getWinner() != Player.O) {
-            return GAME_OVER_COLOR;
-        } else {
-            return new Color(40, 40, 220);
-        }
-    }
 }

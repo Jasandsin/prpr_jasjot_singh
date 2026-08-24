@@ -1,7 +1,25 @@
 package tictactoe;
 
+import ch.trick17.gui.Color;
+
 public class TicTacToeGui {
 
+
+    private Color getXColor(TicTacToeApp ticTacToeApp) {
+        if (ticTacToeApp.game.isOver() && ticTacToeApp.game.getWinner() != Player.X) {
+            return TicTacToeApp.GAME_OVER_COLOR;
+        } else {
+            return new Color(200, 50, 50);
+        }
+    }
+
+    private Color getOColor(TicTacToeApp ticTacToeApp) {
+        if (ticTacToeApp.game.isOver() && ticTacToeApp.game.getWinner() != Player.O) {
+            return TicTacToeApp.GAME_OVER_COLOR;
+        } else {
+            return new Color(40, 40, 220);
+        }
+    }
 
     private void drawBoard(TicTacToeApp ticTacToeApp) {
         ticTacToeApp.gui.setColor(220, 220, 220);
