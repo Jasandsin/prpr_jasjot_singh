@@ -37,7 +37,7 @@ public class TicTacToeApp {
                 }
             }
 
-            if (getWinner() != 0 || moves == 9) {
+            if (new TicTacToe().getWinner(this) != 0 || moves == 9) {
                 do {
                     drawBoard();
                     gui.refreshAndClear(20);
@@ -51,32 +51,6 @@ public class TicTacToeApp {
             drawBoard();
             gui.refreshAndClear(20);
         }
-    }
-
-    private int getWinner() {
-        for (int i = 0; i < 3; i++) {
-            if (board[i][0] != 0 &&
-                board[i][0] == board[i][1] &&
-                board[i][0] == board[i][2]) {
-                return board[i][0];
-            }
-            if (board[0][i] != 0 &&
-                board[0][i] == board[1][i] &&
-                board[0][i] == board[2][i]) {
-                return board[0][i];
-            }
-        }
-        if (board[0][0] != 0 &&
-            board[0][0] == board[1][1] &&
-            board[0][0] == board[2][2]) {
-            return board[0][0];
-        }
-        if (board[0][2] != 0 &&
-            board[0][2] == board[1][1] &&
-            board[0][2] == board[2][0]) {
-            return board[0][2];
-        }
-        return 0;
     }
 
     private void drawBoard() {
@@ -108,7 +82,7 @@ public class TicTacToeApp {
     }
 
     private Color getXColor() {
-        if (getWinner() == 2 || moves == 9 && getWinner() != 1) {
+        if (new TicTacToe().getWinner(this) == 2 || moves == 9 && new TicTacToe().getWinner(this) != 1) {
             return GAME_OVER_COLOR;
         } else {
             return new Color(200, 50, 50);
@@ -116,7 +90,7 @@ public class TicTacToeApp {
     }
 
     private Color getOColor() {
-        if (getWinner() == 1 || moves == 9 && getWinner() != 2) {
+        if (new TicTacToe().getWinner(this) == 1 || moves == 9 && new TicTacToe().getWinner(this) != 2) {
             return GAME_OVER_COLOR;
         } else {
             return new Color(40, 40, 220);
