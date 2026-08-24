@@ -48,10 +48,6 @@ public class TicTacToeApp {
         }
     }
 
-    private boolean isOver() {
-        return getWinner() != 0 || moves == 9;
-    }
-
     private void drawBoard() {
         gui.setColor(220, 220, 220);
         gui.fillRect(0, 0, BOARD_SIZE, BOARD_SIZE);

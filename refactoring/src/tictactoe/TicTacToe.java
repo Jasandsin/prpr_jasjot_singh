@@ -43,4 +43,9 @@ public class TicTacToe {
         }
         return 0;
     }
+
+    boolean isOver() {
+        return getWinner() != 0 || moves == 9;
+    }
+
 }
