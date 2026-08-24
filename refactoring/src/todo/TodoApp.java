@@ -50,9 +50,7 @@ public class TodoApp {
 
         var addButton = new Button("Add", WIDTH - 120, HEIGHT - 40, 50, 30) {
             public void onLeftClick(double _x, double _y) {
-                if (!currentTask.isEmpty()) {
-                    tasks.add(currentTask);
-                }
+                addTask();
                 textArea.setText(taskManager.printTaskList(tasks));
                 currentTask = "";
                 textField.setText("");
@@ -71,6 +69,12 @@ public class TodoApp {
         gui.addComponents(textField, textArea, addButton, clearButton);
         gui.open();
         gui.runUntilClosed();
+    }
+
+    private void addTask() {
+        if (!currentTask.isEmpty()) {
+            tasks.add(currentTask);
+        }
     }
 
 
