@@ -1,79 +1,88 @@
 package tictactoe;
 
 import ch.trick17.gui.Color;
+import ch.trick17.gui.Gui;
+
 
 public class TicTacToeGui {
+    private static final int FIELD_SIZE = 150;
+    private static final int MARGIN = 10;
+    private static final int PADDING = 20;
+    private static final int BOARD_SIZE = 3 * FIELD_SIZE + 4 * MARGIN;
+    private static final Color GAME_OVER_COLOR = new Color(200, 200, 200);
+    private TicTacToe game;
+    private final Gui gui = Gui.create("Tic Tac Toe", BOARD_SIZE, BOARD_SIZE);
 
 
-    private Color getXColor(TicTacToeApp ticTacToeApp) {
-        if (ticTacToeApp.game.isOver() && ticTacToeApp.game.getWinner() != Player.X) {
-            return TicTacToeApp.GAME_OVER_COLOR;
+    private Color getXColor() {
+        if (game.isOver() && game.getWinner() != Player.X) {
+            return GAME_OVER_COLOR;
         } else {
             return new Color(200, 50, 50);
         }
     }
 
-    private Color getOColor(TicTacToeApp ticTacToeApp) {
-        if (ticTacToeApp.game.isOver() && ticTacToeApp.game.getWinner() != Player.O) {
-            return TicTacToeApp.GAME_OVER_COLOR;
+    private Color getOColor() {
+        if (game.isOver() && game.getWinner() != Player.O) {
+            return GAME_OVER_COLOR;
         } else {
             return new Color(40, 40, 220);
         }
     }
 
-    private void drawBoard(TicTacToeApp ticTacToeApp) {
-        ticTacToeApp.gui.setColor(220, 220, 220);
-        ticTacToeApp.gui.fillRect(0, 0, TicTacToeApp.BOARD_SIZE, TicTacToeApp.BOARD_SIZE);
+    private void drawBoard() {
+        gui.setColor(220, 220, 220);
+        gui.fillRect(0, 0, BOARD_SIZE, BOARD_SIZE);
         for (int row = 0; row < 3; row++) {
             for (int col = 0; col < 3; col++) {
-                var x = col * TicTacToeApp.FIELD_SIZE + (col + 1) * TicTacToeApp.MARGIN;
-                var y = row * TicTacToeApp.FIELD_SIZE + (row + 1) * TicTacToeApp.MARGIN;
-                ticTacToeApp.gui.setColor(255, 255, 255);
-                ticTacToeApp.gui.fillRect(x, y, TicTacToeApp.FIELD_SIZE, TicTacToeApp.FIELD_SIZE);
+                var x = col * FIELD_SIZE + (col + 1) * MARGIN;
+                var y = row * FIELD_SIZE + (row + 1) * MARGIN;
+                gui.setColor(255, 255, 255);
+                gui.fillRect(x, y, FIELD_SIZE, FIELD_SIZE);
 
-                ticTacToeApp.gui.setStrokeWidth(20);
-                if (ticTacToeApp.game.getField(row, col) == Player.X) {
-                    ticTacToeApp.gui.setColor(ticTacToeApp.getXColor());
-                    ticTacToeApp.gui.drawLine(
-                            x + TicTacToeApp.PADDING, y + TicTacToeApp.PADDING,
-                            x + TicTacToeApp.FIELD_SIZE - TicTacToeApp.PADDING, y + TicTacToeApp.FIELD_SIZE - TicTacToeApp.PADDING);
-                    ticTacToeApp.gui.drawLine(
-                            x + TicTacToeApp.FIELD_SIZE - TicTacToeApp.PADDING, y + TicTacToeApp.PADDING,
-                            x + TicTacToeApp.PADDING, y + TicTacToeApp.FIELD_SIZE - TicTacToeApp.PADDING);
-                } else if (ticTacToeApp.game.getField(row, col) == Player.O) {
-                    ticTacToeApp.gui.setColor(ticTacToeApp.getOColor());
-                    ticTacToeApp.gui.drawOval(x + TicTacToeApp.PADDING, y + TicTacToeApp.PADDING,
-                            TicTacToeApp.FIELD_SIZE - 2 * TicTacToeApp.PADDING, TicTacToeApp.FIELD_SIZE - 2 * TicTacToeApp.PADDING);
+                gui.setStrokeWidth(20);
+                if (game.getField(row, col) == Player.X) {
+                    gui.setColor(getXColor());
+                    gui.drawLine(
+                            x + PADDING, y + PADDING,
+                            x + FIELD_SIZE - PADDING, y + FIELD_SIZE - PADDING);
+                    gui.drawLine(
+                            x + FIELD_SIZE - PADDING, y + PADDING,
+                            x + PADDING, y + FIELD_SIZE - PADDING);
+                } else if (game.getField(row, col) == Player.O) {
+                    gui.setColor(getOColor());
+                    gui.drawOval(x + PADDING, y + PADDING,
+                            FIELD_SIZE - 2 * PADDING, FIELD_SIZE - 2 * PADDING);
                 }
             }
         }
     }
 
-    void start(TicTacToeApp ticTacToeApp) {
-        ticTacToeApp.game = new TicTacToe();
+    void start() {
+        game = new TicTacToe();
 
-        ticTacToeApp.drawBoard();
-        ticTacToeApp.gui.open();
+        drawBoard();
+        gui.open();
 
-        while (ticTacToeApp.gui.isOpen()) {
-            if (ticTacToeApp.gui.wasLeftMouseButtonClicked()) {
-                int row = (int) (ticTacToeApp.gui.getMouseY() - TicTacToeApp.MARGIN / 2) / (TicTacToeApp.FIELD_SIZE + TicTacToeApp.MARGIN);
-                int col = (int) (ticTacToeApp.gui.getMouseX() - TicTacToeApp.MARGIN / 2) / (TicTacToeApp.FIELD_SIZE + TicTacToeApp.MARGIN);
-                ticTacToeApp.game.play(row, col);
+        while (gui.isOpen()) {
+            if (gui.wasLeftMouseButtonClicked()) {
+                int row = (int) (gui.getMouseY() - MARGIN / 2) / (FIELD_SIZE + MARGIN);
+                int col = (int) (gui.getMouseX() - MARGIN / 2) / (FIELD_SIZE + MARGIN);
+                game.play(row, col);
             }
 
-            if (ticTacToeApp.game.isOver()) {
+            if (game.isOver()) {
                 do {
-                    ticTacToeApp.drawBoard();
-                    ticTacToeApp.gui.refreshAndClear(20);
-                } while (ticTacToeApp.gui.isOpen() && !ticTacToeApp.gui.wasLeftMouseButtonClicked());
+                    drawBoard();
+                    gui.refreshAndClear(20);
+                } while (gui.isOpen() && !gui.wasLeftMouseButtonClicked());
 
                 // start new game
-                ticTacToeApp.game = new TicTacToe();
+                game = new TicTacToe();
             }
 
-            ticTacToeApp.drawBoard();
-            ticTacToeApp.gui.refreshAndClear(20);
+            drawBoard();
+            gui.refreshAndClear(20);
         }
     }
 }
