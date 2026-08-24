@@ -13,39 +13,11 @@ public class TicTacToeApp {
     private static final Color GAME_OVER_COLOR = new Color(200, 200, 200);
 
     public static void main(String[] args) {
-        new TicTacToeApp().start();
+        new TicTacToeGui().start(new TicTacToeApp());
     }
 
     private final Gui gui = Gui.create("Tic Tac Toe", BOARD_SIZE, BOARD_SIZE);
     private TicTacToe game;
-
-    private void start() {
-        game = new TicTacToe();
-
-        drawBoard();
-        gui.open();
-
-        while (gui.isOpen()) {
-            if (gui.wasLeftMouseButtonClicked()) {
-                int row = (int) (gui.getMouseY() - MARGIN / 2) / (FIELD_SIZE + MARGIN);
-                int col = (int) (gui.getMouseX() - MARGIN / 2) / (FIELD_SIZE + MARGIN);
-                game.play(row, col);
-            }
-
-            if (game.isOver()) {
-                do {
-                    drawBoard();
-                    gui.refreshAndClear(20);
-                } while (gui.isOpen() && !gui.wasLeftMouseButtonClicked());
-
-                // start new game
-                game = new TicTacToe();
-            }
-
-            drawBoard();
-            gui.refreshAndClear(20);
-        }
-    }
 
     private void drawBoard() {
         gui.setColor(220, 220, 220);
