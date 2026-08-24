@@ -30,10 +30,10 @@ public class TodoApp {
     private String currentTask = "";
 
     public static void main(String[] args) {
-        new TodoApp().createAndShowGUI();
+        new TodoApp().createAndShowGUI(new TaskManager());
     }
 
-    private void createAndShowGUI() {
+    private void createAndShowGUI(final TaskManager taskManager) {
         gui.setFontSize(16);
 
         var textField = new TextField(10, 10, 380, 30) {
@@ -46,14 +46,14 @@ public class TodoApp {
         textField.setTextColor(new Color(0, 0, 0));
 
         var textArea = new TextArea(10, 20 + textField.getHeight(), 380, 200);
-        textArea.setText(new TaskManager().printTaskList(tasks));
+        textArea.setText(taskManager.printTaskList(tasks));
 
         var addButton = new Button("Add", WIDTH - 120, HEIGHT - 40, 50, 30) {
             public void onLeftClick(double _x, double _y) {
                 if (!currentTask.isEmpty()) {
                     tasks.add(currentTask);
                 }
-                textArea.setText(new TaskManager().printTaskList(tasks));
+                textArea.setText(taskManager.printTaskList(tasks));
                 currentTask = "";
                 textField.setText("");
             }
