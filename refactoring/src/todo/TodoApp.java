@@ -5,7 +5,6 @@ import java.util.List;
 
 import ch.trick17.gui.Color;
 import ch.trick17.gui.Gui;
-import ch.trick17.gui.component.Drawable;
 import ch.trick17.gui.widget.TextField;
 import ch.trick17.gui.widget.Button;
 
@@ -47,14 +46,14 @@ public class TodoApp {
         textField.setTextColor(new Color(0, 0, 0));
 
         var textArea = new TextArea(10, 20 + textField.getHeight(), 380, 200);
-        textArea.setText(printTaskList());
+        textArea.setText(TaskManager.printTaskList(tasks));
 
         var addButton = new Button("Add", WIDTH - 120, HEIGHT - 40, 50, 30) {
             public void onLeftClick(double _x, double _y) {
                 if (!currentTask.isEmpty()) {
                     tasks.add(currentTask);
                 }
-                textArea.setText(printTaskList());
+                textArea.setText(TaskManager.printTaskList(tasks));
                 currentTask = "";
                 textField.setText("");
             }
@@ -74,13 +73,5 @@ public class TodoApp {
         gui.runUntilClosed();
     }
 
-
-    private String printTaskList() {
-        StringBuilder taskList = new StringBuilder();
-        for (int i = 0; i < tasks.size(); i++) {
-            taskList.append(i + 1).append(". ").append(tasks.get(i)).append("\n");
-        }
-        return taskList.toString();
-    }
 
 }
